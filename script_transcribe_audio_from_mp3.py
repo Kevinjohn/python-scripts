@@ -31,11 +31,11 @@ def transcribe_audio_files(folder_path):
                     transcript_file.write(result['text'])
                 print(f"{Fore.GREEN}Saved transcript: {os.path.basename(output_path)}{Style.RESET_ALL}")
             except Exception as error:
-                print(f"{Fore.RED}Error transcribing {audio_file}: {error}{Style.RESET_ALL}")
+                print(f"{Fore.RED}!! Error transcribing {audio_file}: {error}{Style.RESET_ALL}")
 
         print(f"{Fore.GREEN}Audio transcription completed successfully.{Style.RESET_ALL}")
     except Exception as error:
-        print(f"{Fore.RED}Error: {error}{Style.RESET_ALL}")
+        print(f"{Fore.RED}!! Error: {error}{Style.RESET_ALL}")
 
 folder_to_process = get_folder_path()
 run_function_on_all_subfolders(folder_to_process, transcribe_audio_files)

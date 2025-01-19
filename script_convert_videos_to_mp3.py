@@ -58,7 +58,7 @@ def convert_video_to_mp3(folder_path):
                     stdout=subprocess.DEVNULL,                     
                     check=True
                 )
-                print(f"{Fore.GREEN}* Output created: {os.path.basename(output_path)}{Style.RESET_ALL}")
+                print(f"{Fore.GREEN}> Output created: {os.path.basename(output_path)}{Style.RESET_ALL}")
 
             except Exception as e:
                 #print(f"{Fore.RED}Error converting {video_file}: {error}{Style.RESET_ALL}")
@@ -71,7 +71,7 @@ def convert_video_to_mp3(folder_path):
 
         print(f"{Fore.GREEN}Video-to-MP3 conversion completed successfully.{Style.RESET_ALL}")
     except Exception as error:
-        print(f"{Fore.RED}Error: {error}{Style.RESET_ALL}")
+        print(f"{Fore.RED}!! Error: {error}{Style.RESET_ALL}")
 
 folder_to_process = get_folder_path()
 run_function_on_all_subfolders(folder_to_process, convert_video_to_mp3)
