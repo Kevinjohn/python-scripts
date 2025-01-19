@@ -1,8 +1,9 @@
 import os
 import whisper
 from colorama import Fore, Style
-from _include_process_folders import process_folders
 from _include_get_folder_path import get_folder_path
+from _include_process_folders import run_function_on_all_subfolders
+
 
 def transcribe_audio_files(folder_path):
     """Transcribe all MP3 files in a folder and save transcripts as text files."""
@@ -36,4 +37,4 @@ def transcribe_audio_files(folder_path):
         print(f"{Fore.RED}Error: {error}{Style.RESET_ALL}")
 
 folder_to_process = get_folder_path()
-process_folders(folder_to_process, transcribe_audio_files)
+run_function_on_all_subfolders(folder_to_process, transcribe_audio_files)

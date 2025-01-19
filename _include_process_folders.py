@@ -1,6 +1,6 @@
 import os
 
-def process_folders(base_folder, process_function):
+def run_function_on_all_subfolders(base_folder, process_function):
     """
     Process files in a folder and optionally in its subfolders.
 

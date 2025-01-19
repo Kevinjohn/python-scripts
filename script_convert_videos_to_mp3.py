@@ -1,8 +1,9 @@
 import os
 import subprocess
 from colorama import Fore, Style
-from _include_process_folders import process_folders
 from _include_get_folder_path import get_folder_path
+from _include_process_folders import run_function_on_all_subfolders
+
 
 def convert_video_to_mp3(folder_path):
     """Convert all video files in a folder to MP3 format."""
@@ -37,4 +38,4 @@ def convert_video_to_mp3(folder_path):
         print(f"{Fore.RED}Error: {error}{Style.RESET_ALL}")
 
 folder_to_process = get_folder_path()
-process_folders(folder_to_process, convert_video_to_mp3)
+run_function_on_all_subfolders(folder_to_process, convert_video_to_mp3)
