@@ -1,7 +1,9 @@
 import os
-from colorama import Fore, Style
+from colorama import init, Fore, Style
 from _include_get_folder_path import get_folder_path
 from _include_process_folders import run_function_on_all_subfolders
+
+init(autoreset=True)
 
 def replace_spaces_with_underscores(folder_path):
     """Replace spaces in filenames with underscores in the given folder."""
